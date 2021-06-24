@@ -21,7 +21,7 @@ class userController extends Controller
         $CID=DB::table('userInfo')->insertGetId([
             'Username'=>$arr["username"],
             'email'=>$arr["email"],
-            'password'=>$arr["email"],
+            'password'=>$arr["password"],
             "age"=>$arr["age"],
             "phone"=>$arr["phone"]
             
