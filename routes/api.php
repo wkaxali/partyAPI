@@ -22,3 +22,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/login',[userController::class, 'login'] );
 
 Route::post('/signUp',[userController::class, 'signUp'] );
+
+Route::post('/uploadProfileImage',[userController::class, 'uploadProfileImage'] );
+
+Route::post('/insertDeviceToken',[userController::class, 'insertDeviceToken'] );
+
+Route::get('/getDeviceToken/{id}',[userController::class, 'getDeviceToken'] );
