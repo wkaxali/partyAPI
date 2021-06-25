@@ -8,6 +8,7 @@ use DB;
 
 class userController extends Controller
 {
+
     public function signUp(Request $request) {
         // dd($request);
          $arr=$request->json()->all();
@@ -130,5 +131,6 @@ try{
         } else {
             $profile_picture = NULL;
         }
+
     }
 }
