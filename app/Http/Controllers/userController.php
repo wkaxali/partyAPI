@@ -80,6 +80,19 @@ class userController extends Controller
         return response()->json($customerData);
         }
     }
+    public function getUser(Request $request,$uid) {
+
+        
+        $customerData = DB::table('userInfo')
+        ->where([['uid', '=', $uid]])
+        ->First();
+        if($customerData==NULL){
+            return response()->json(["Invalid User"],500);
+        }else{
+
+        return response()->json($customerData);
+        }
+    }
     
     public function insertDeviceToken(Request $request) {
 try{

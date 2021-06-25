@@ -28,3 +28,4 @@ Route::post('/uploadProfileImage',[userController::class, 'uploadProfileImage'] 
 Route::post('/insertDeviceToken',[userController::class, 'insertDeviceToken'] );
 
 Route::get('/getDeviceToken/{id}',[userController::class, 'getDeviceToken'] );
+Route::get('/user/{id}',[userController::class, 'getUser'] );
