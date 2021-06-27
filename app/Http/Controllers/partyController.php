@@ -11,7 +11,9 @@ class partyController extends Controller
         try{
         
          $arr=$request->json()->all();
+
          $dateNow = Carbon::now()->toDateString();
+         //dd($dateNow);
 
          $PID=DB::table('party')->insertGetId([
             'UserID'=>$arr["UserID"],
@@ -22,6 +24,7 @@ class partyController extends Controller
             "lacationName"=>$arr["lacationName"],
             "logitute"=>$arr["logitute"],
             "latitute"=>$arr["latitute"],
+            "Created_at"=>$dateNow,
             "PartyRating"=>$arr["PartyRating"],
             "Duration"=>$arr["Duration"],
             "Status"=>$arr["Status"]
